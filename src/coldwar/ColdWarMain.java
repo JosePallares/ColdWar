@@ -17,14 +17,6 @@ import javax.swing.border.EmptyBorder;
 
 import coldwar.utildb.DatosBDD;
 import coldwar.utildb.DatosXML;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ColdWarMain extends JFrame implements ActionListener{
 	
@@ -74,102 +66,7 @@ public class ColdWarMain extends JFrame implements ActionListener{
 	}
 
 	public static void main(String[] args) {
-	JFrame ventana = new JFrame("Ventana de gestión de eventos");
-
-        ventana.addWindowListener(new WindowListener() {
-
-            @Override
-            public void windowOpened(WindowEvent e) {
-                System.out.println("Se abre la ventana");
-            }
-
-            @Override
-            public void windowClosing(WindowEvent e) {
-                System.out.println("Cerrando la ventana");
-                System.exit(0);
-            }
-
-            @Override
-            public void windowClosed(WindowEvent e) {
-                System.out.println("Ventana cerrada");
-            }
-
-            @Override
-            public void windowIconified(WindowEvent e) {
-                System.out.println("Ventana a icono");
-                try {
-                    Thread.sleep(3000);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(GestionEventos.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-
-            @Override
-            public void windowDeiconified(WindowEvent e) {
-                System.out.println("Ventana sale de icono");
-            }
-
-            @Override
-            public void windowActivated(WindowEvent e) {
-                System.out.println("Ventana activada");
-            }
-
-            @Override
-            public void windowDeactivated(WindowEvent e) {
-                System.out.println("Ventana desactivada");
-            }
-        });
-        
-      
-        ventana.addKeyListener(new KeyListener() {
-
-            @Override
-            public void keyTyped(KeyEvent e) {
-                System.out.println("Tecla: " + e.getKeyChar());
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                System.out.println("Pulsada: " + e.getKeyText(e.getKeyCode()));
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-                System.out.println("Soltada: "  + e.getKeyText(e.getKeyCode()));
-            }
-        });
-        
-        ventana.addMouseListener(new MouseListener() {
-
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                System.out.println("Pulsado el botón del ratón " + e.getButton());
-                System.out.println("En la posición: " + e.getPoint());
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-            }
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                System.out.println("El ratón sale de la ventana");
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                System.out.println("El ratón entra en la ventana");
-            }
-        });
-        
-        
-        ventana.setSize(600, 400);
-        ventana.setLocationRelativeTo(null);
-        ventana.setVisible(true);
+	
             // TODO Auto-generated method stub
         new ColdWarMain();
 	}
