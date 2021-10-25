@@ -184,6 +184,10 @@ public class coldwarFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        JugarPanel jugarpanel = new JugarPanel();
+        jugarpanel.setVisible(true);
+        this.dispose();
+        
         JugarFrame jugarframe = new JugarFrame();
         jugarframe.setVisible(true);
         this.dispose();
